@@ -1,4 +1,5 @@
 import json
+from typing import Optional
 
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError
@@ -8,36 +9,18 @@ from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 
-from core import const
-
-
-def swap_string(string: str) -> str:
-    """
-    Swap string using IMPORT_MAPPING dictionary
-    or return original string if not found.
-    """
-    return const.IMPORT_MAPPING.get(string, string)
-
-
-def fix_keys_in_dict(dictionary: dict) -> dict:
-    """
-    Swap keys in dictionary using swap_string function.
-    """
-    for key in list(dictionary):  # Force copy of keys to prevent RuntimeError
-        dictionary[swap_string(key)] = dictionary.pop(key)
-
-    return dictionary
+from core.utils import swap_string, get_model, fix_keys_in_dict
 
 
 def import_data(body: list) -> JsonResponse:
+    """
+    Import model objects from JSON data.
+    """
     for obj_dict in body:
         # Get model name from the first key in the dictionary
         model_name = swap_string(next(iter(obj_dict)))
-        try:
-            model: Model = apps.get_model(
-                app_label="core", model_name=model_name
-            )
-        except LookupError:
+        model = get_model(model_name)
+        if not model:
             return JsonResponse(
                 {
                     "status": "error",
@@ -45,6 +28,7 @@ def import_data(body: list) -> JsonResponse:
                 },
                 status=400,
             )
+
         obj_data: dict = next(iter(obj_dict.values()))
 
         if not obj_data.get("id"):
@@ -110,11 +94,8 @@ class ModelListView(View):
         List objects for a given model.
         """
         model_name = self.kwargs["model_name"]
-        try:
-            model: Model = apps.get_model(
-                app_label="core", model_name=model_name
-            )
-        except LookupError:
+        model = get_model(model_name)
+        if not model:
             return JsonResponse(
                 {
                     "status": "error",
@@ -137,11 +118,8 @@ class ObjectDetailView(View):
         model_name = self.kwargs["model_name"]
         pk = self.kwargs["pk"]
 
-        try:
-            model: Model = apps.get_model(
-                app_label="core", model_name=model_name
-            )
-        except LookupError:
+        model = get_model(model_name)
+        if not model:
             return JsonResponse(
                 {
                     "status": "error",
@@ -151,7 +129,7 @@ class ObjectDetailView(View):
             )
 
         try:
-            obj = model.objects.get(id=pk)
+            obj = model.objects.get(pk=pk)
         except model.DoesNotExist:
             return JsonResponse(
                 {
