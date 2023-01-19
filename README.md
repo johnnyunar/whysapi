@@ -32,6 +32,7 @@
     * [Installation](#installation)
 * [Usage](#usage)
     * [Authentication](#authentication)
+    * [Testing](#testing)
 * [Contact](#contact)
 
 <!-- ABOUT THE PROJECT -->
@@ -108,6 +109,20 @@ where `pk` is the primary key of the object.
 Authentication has not been implemented for purposes of this exercise.
 
 <!-- CONTACT -->
+
+### Testing
+
+To run the tests, run the following command:
+
+```sh
+docker-compose run app python manage.py test
+```
+
+OR, without docker-compose:
+
+```sh
+./manage.py test
+```
 
 ## Contact
 
