@@ -38,31 +38,58 @@
 
 ## About The Project
 
-TODO
+This is an exercise for the company Whys.
 
 ### Built With
 
+* [Python 3.11](https://www.python.org/)
 * [Django](https://www.djangoproject.com/)
 
 ## Getting Started
 
-TODO
-
 ### Prerequisites
 
-TODO
+* [Docker](https://www.docker.com/)
+
 
 ### Installation
 
-TODO
+1. Clone the repo
+```sh
+git clone https://github.com/johnunar/whysapi.git
+```
+
+2. Run the docker-compose
+```sh
+docker-compose up
+```
+
 
 ## Usage
 
-TODO
+This is a REST API, so you can use any tool to test it. I recommend [Insomnia](https://insomnia.rest/).
+
+There are 3 endpoints:
+### /import/
+This endpoint is used to import the data using JSON. You can use the file `data.json` in the root of the project to test it.
+### /detail/<model_name>/
+This endpoint is used to get a list of model objects from the database. You can use the following models:
+* `attributename`
+* `attributevalue`
+* `attribute`
+* `product`
+* `productattribute`
+* `image`
+* `productimage`
+* `catalog`
+### /detail/<model_name>/\<pk>/
+This endpoint is used to get a specific model object from the database, where `pk` is the primary key of the object.
+
+404 Not Found will be returned if the object does not exist.
 
 ### Authentication
 
-TODO
+Authentication has not been implemented for purposes of this exercise.
 
 <!-- CONTACT -->
 

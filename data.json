@@ -1,0 +1,684 @@
+[
+  {
+    "AttributeName": {
+      "id": 1,
+      "nazev": "Barva"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 1,
+      "hodnota": "modrá"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 2,
+      "hodnota": "zelená"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 3,
+      "hodnota": "žlutá"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 4,
+      "hodnota": "růžová"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 5,
+      "hodnota": "černá"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 6,
+      "hodnota": "bílá"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 7,
+      "hodnota": "hnědá"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 8,
+      "hodnota": "světle modrá"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 9,
+      "hodnota": "průhledná"
+    }
+  },
+  {
+    "AttributeName": {
+      "id": 2,
+      "nazev": "Odolnost",
+      "kod": "durability"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 10,
+      "hodnota": "žádná"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 11,
+      "hodnota": "malá"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 12,
+      "hodnota": "střední"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 13,
+      "hodnota": "velká"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 14,
+      "hodnota": "nezničitelná"
+    }
+  },
+  {
+    "AttributeName": {
+      "id": 3,
+      "nazev": "Povrch"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 15,
+      "hodnota": "hladký"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 16,
+      "hodnota": "hrubý"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 17,
+      "hodnota": "drsný"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 18,
+      "hodnota": "jemný"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 19,
+      "hodnota": "ano"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 20,
+      "hodnota": "ne"
+    }
+  },
+  {
+    "Attribute": {
+      "id": 1,
+      "nazev_atributu_id": 1,
+      "hodnota_atributu_id": 1
+    }
+  },
+  {
+    "Attribute": {
+      "id": 2,
+      "nazev_atributu_id": 1,
+      "hodnota_atributu_id": 2
+    }
+  },
+  {
+    "Attribute": {
+      "id": 3,
+      "nazev_atributu_id": 1,
+      "hodnota_atributu_id": 3
+    }
+  },
+  {
+    "Attribute": {
+      "id": 4,
+      "nazev_atributu_id": 1,
+      "hodnota_atributu_id": 4
+    }
+  },
+  {
+    "Attribute": {
+      "id": 5,
+      "nazev_atributu_id": 1,
+      "hodnota_atributu_id": 5
+    }
+  },
+  {
+    "Attribute": {
+      "id": 6,
+      "nazev_atributu_id": 1,
+      "hodnota_atributu_id": 6
+    }
+  },
+  {
+    "Attribute": {
+      "id": 7,
+      "nazev_atributu_id": 1,
+      "hodnota_atributu_id": 7
+    }
+  },
+  {
+    "Attribute": {
+      "id": 8,
+      "nazev_atributu_id": 1,
+      "hodnota_atributu_id": 8
+    }
+  },
+  {
+    "Attribute": {
+      "id": 9,
+      "nazev_atributu_id": 1,
+      "hodnota_atributu_id": 9
+    }
+  },
+  {
+    "Attribute": {
+      "id": 10,
+      "nazev_atributu_id": 2,
+      "hodnota_atributu_id": 10
+    }
+  },
+  {
+    "Attribute": {
+      "id": 11,
+      "nazev_atributu_id": 2,
+      "hodnota_atributu_id": 11
+    }
+  },
+  {
+    "Attribute": {
+      "id": 12,
+      "nazev_atributu_id": 2,
+      "hodnota_atributu_id": 12
+    }
+  },
+  {
+    "Attribute": {
+      "id": 13,
+      "nazev_atributu_id": 2,
+      "hodnota_atributu_id": 13
+    }
+  },
+  {
+    "Attribute": {
+      "id": 14,
+      "nazev_atributu_id": 2,
+      "hodnota_atributu_id": 14
+    }
+  },
+  {
+    "Attribute": {
+      "id": 15,
+      "nazev_atributu_id": 3,
+      "hodnota_atributu_id": 15
+    }
+  },
+  {
+    "Attribute": {
+      "id": 16,
+      "nazev_atributu_id": 3,
+      "hodnota_atributu_id": 16
+    }
+  },
+  {
+    "Attribute": {
+      "id": 17,
+      "nazev_atributu_id": 3,
+      "hodnota_atributu_id": 17
+    }
+  },
+  {
+    "Attribute": {
+      "id": 18,
+      "nazev_atributu_id": 3,
+      "hodnota_atributu_id": 18
+    }
+  },
+  {
+    "AttributeName": {
+      "id": 4,
+      "nazev": "displej",
+      "zobrazit": true
+    }
+  },
+  {
+    "AttributeName": {
+      "id": 1,
+      "zobrazit": true
+    }
+  },
+  {
+    "AttributeName": {
+      "id": 2,
+      "zobrazit": true
+    }
+  },
+  {
+    "AttributeName": {
+      "id": 3,
+      "zobrazit": true
+    }
+  },
+  {
+    "Attribute": {
+      "id": 19,
+      "nazev_atributu_id": 4,
+      "hodnota_atributu_id": 19
+    }
+  },
+  {
+    "Attribute": {
+      "id": 20,
+      "nazev_atributu_id": 4,
+      "hodnota_atributu_id": 20
+    }
+  },
+  {
+    "Product": {
+      "id": 1,
+      "nazev": "Whirlpool B TNF 5323 OX",
+      "description": "Volně stojící kombinovaná lednička se šestým smyslem. Díky tomuto šestému smyslu FreshLock dokáže obnovit teplotu 5× rychleji",
+      "cena": "21566",
+      "mena": "CZK",
+      "published_on": null,
+      "is_published": false
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 1,
+      "attribute": 19,
+      "product": 1
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 2,
+      "attribute": 4,
+      "product": 1
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 3,
+      "attribute": 18,
+      "product": 1
+    }
+  },
+  {
+    "Image": {
+      "id": 1,
+      "obrazek": "https://free-images.com/or/4929/fridge_t_png.jpg"
+    }
+  },
+  {
+    "ProductImage": {
+      "id": 1,
+      "product": 1,
+      "obrazek_id": 1,
+      "nazev": "hlavní foto"
+    }
+  },
+  {
+    "Image": {
+      "id": 2,
+      "nazev": "plná lednice",
+      "obrazek": "https://free-images.com/or/ccc6/faulty_fridge_lighting_led_0.jpg"
+    }
+  },
+  {
+    "ProductImage": {
+      "id": 2,
+      "product": 1,
+      "obrazek_id": 2,
+      "nazev": "galerie"
+    }
+  },
+  {
+    "Image": {
+      "id": 3,
+      "obrazek": "https://free-images.com/md/df12/faulty_shelf_lighting_led.jpg"
+    }
+  },
+  {
+    "Product": {
+      "id": 2,
+      "nazev": "Vans Old Skool black",
+      "description": "Tohle prostě musíš mít. Unisex boty Vans Old Skool jsou snad povinnost pro každého skejťáka a rockera tělem i duší. Tradiční konstrukce a vzhled prostě nezklame",
+      "cena": "1466.00",
+      "mena": "CZK",
+      "published_on": "2018-01-15T00:00:00Z",
+      "is_published": false
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 4,
+      "attribute": 6,
+      "product": 2
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 5,
+      "attribute": 11,
+      "product": 2
+    }
+  },
+  {
+    "ProductImage": {
+      "id": 3,
+      "product": 2,
+      "obrazek_id": 3,
+      "nazev": "hlavní foto"
+    }
+  },
+  {
+    "AttributeName": {
+      "id": 5,
+      "nazev": "Skladem"
+    }
+  },
+  {
+    "Attribute": {
+      "id": 21,
+      "nazev_atributu_id": 5,
+      "hodnota_atributu_id": 19
+    }
+  },
+  {
+    "Attribute": {
+      "id": 22,
+      "nazev_atributu_id": 5,
+      "hodnota_atributu_id": 20
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 6,
+      "attribute": 21,
+      "product": 2
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 7,
+      "attribute": 22,
+      "product": 1
+    }
+  },
+  {
+    "Image": {
+      "id": 4,
+      "obrazek": "https://free-images.com/lg/7687/blue_jay_bird_nature.jpg"
+    }
+  },
+  {
+    "Product": {
+      "id": 3,
+      "nazev": "Daniel Wellington DW00100164",
+      "description": "Módní hodinky Daniel Wellington z kolekce Classic Petite Sterling. Ideální doplněk pro ženy upřednostňující analogové a kulaté hodinky",
+      "cena": "11278.00",
+      "mena": "CZK",
+      "published_on": "2017-11-15T00:55:00Z",
+      "is_published": true
+    }
+  },
+  {
+    "AttributeName": {
+      "id": 6,
+      "nazev": "Sleva"
+    }
+  },
+  {
+    "Attribute": {
+      "id": 23,
+      "nazev_atributu_id": 6,
+      "hodnota_atributu_id": 19
+    }
+  },
+  {
+    "Attribute": {
+      "id": 24,
+      "nazev_atributu_id": 6,
+      "hodnota_atributu_id": 20
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 8,
+      "attribute": 7,
+      "product": 3
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 9,
+      "attribute": 24,
+      "product": 3
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 10,
+      "attribute": 21,
+      "product": 3
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 11,
+      "attribute": 13,
+      "product": 3
+    }
+  },
+  {
+    "Image": {
+      "id": 5,
+      "obrazek": "https://free-images.com/or/a09b/watch_time_ladies_watch_0.jpg"
+    }
+  },
+  {
+    "ProductImage": {
+      "id": 4,
+      "product": 3,
+      "obrazek_id": 5,
+      "nazev": "hlavní foto"
+    }
+  },
+  {
+    "Image": {
+      "id": 3,
+      "obrazek": "https://free-images.com/lg/ff5f/shoe_handmade_shoes_dress.jpg"
+    }
+  },
+  {
+    "Product": {
+      "id": 4,
+      "nazev": "Tempish Dream Lady",
+      "description": "Elegantní, zateplené, pohodlné dámské lední brusle v tradičním bílém provedení. Ideální pro rekreační bruslení. Uvnitř se můžete těšit na anatomickou bandáž s pamětí",
+      "cena": "986.00",
+      "mena": "CZK",
+      "is_published": false
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 21,
+      "hodnota": "pánské"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 22,
+      "hodnota": "dámské"
+    }
+  },
+  {
+    "AttributeValue": {
+      "id": 23,
+      "hodnota": "dětské"
+    }
+  },
+  {
+    "AttributeName": {
+      "id": 7,
+      "nazev": "Určení",
+      "zobrazit": true
+    }
+  },
+  {
+    "Attribute": {
+      "id": 25,
+      "nazev_atributu_id": 7,
+      "hodnota_atributu_id": 21
+    }
+  },
+  {
+    "Attribute": {
+      "id": 26,
+      "nazev_atributu_id": 7,
+      "hodnota_atributu_id": 22
+    }
+  },
+  {
+    "Attribute": {
+      "id": 27,
+      "nazev_atributu_id": 7,
+      "hodnota_atributu_id": 23
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 12,
+      "attribute": 26,
+      "product": 4
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 13,
+      "attribute": 6,
+      "product": 4
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 14,
+      "attribute": 21,
+      "product": 4
+    }
+  },
+  {
+    "Product": {
+      "id": 2,
+      "cena": "900"
+    }
+  },
+  {
+    "Image": {
+      "id": 6,
+      "obrazek": "https://free-images.com/md/faa5/teddy_bear_sheep_toys.jpg"
+    }
+  },
+  {
+    "Product": {
+      "id": 5,
+      "nazev": "Funko Pop God of War Kratos",
+      "description": "Kratos, otec Atrea, se dočkal své vinylové POP! figurky od společnosti Funko.",
+      "cena": "800",
+      "mena": "CZK",
+      "is_published": true
+    }
+  },
+  {
+    "Catalog": {
+      "id": 1,
+      "nazev": "Výprodej 2018",
+      "obrazek_id": 4,
+      "products_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "attributes_ids": [
+        2,
+        4,
+        21,
+        23
+      ]
+    }
+  },
+  {
+    "ProductImage": {
+      "id": 5,
+      "product": 5,
+      "obrazek_id": 6,
+      "nazev": "hlavní foto"
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 15,
+      "attribute": 21,
+      "product": 5
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 16,
+      "attribute": 2,
+      "product": 5
+    }
+  },
+  {
+    "ProductAttributes": {
+      "id": 17,
+      "attribute": 27,
+      "product": 5
+    }
+  },
+  {
+    "Catalog": {
+      "id": 1,
+      "products_ids": [
+        1,
+        2,
+        3,
+        5
+      ]
+    }
+  }
+]
