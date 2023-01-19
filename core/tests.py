@@ -116,13 +116,49 @@ class ImportObjectsViewTest(TestCase):
         self.assertEqual(obj.attributes.count(), 2)
         self.assertEqual(obj.products.count(), 2)
 
-    def test_post_raises_error_on_invalid_data(self):
+    def test_post_raises_error_on_invalid_id(self):
         data = [
             {
                 "Attribute": {
                     "id": "invalid_id",
                     "nazev_atributu_id": 1,
                     "hodnota_atributu_id": 1,
+                }
+            },
+        ]
+        response = self.client.post(
+            reverse("import_objects"),
+            data=json.dumps(data),
+            content_type="application/json",
+        )
+        self.assertEqual(response.status_code, 400)
+
+    def test_post_raises_error_on_invalid_data(self):
+        data = [
+            {
+                "AttributeName": {
+                    "id": 3,
+                    "nazev": "Attribute Name",
+                    "hodnota": "Attribute Value",
+                    "display": "Invalid Display Value",
+                }
+            },
+        ]
+        response = self.client.post(
+            reverse("import_objects"),
+            data=json.dumps(data),
+            content_type="application/json",
+        )
+        self.assertEqual(response.status_code, 400)
+
+    def test_post_raises_error_on_invalid_field_name(self):
+        data = [
+            {
+                "AttributeName": {
+                    "id": 3,
+                    "nazev_atributu_id": 1,
+                    "hodnota_atributu_id": 2,
+                    "display": True
                 }
             },
         ]

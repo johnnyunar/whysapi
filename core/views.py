@@ -1,7 +1,7 @@
 import json
 from typing import Optional
 
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError, FieldError
 from django.db import IntegrityError
 from django.forms import model_to_dict
 from django.http import JsonResponse
@@ -47,7 +47,7 @@ def import_data(body: list) -> JsonResponse:
             obj, _ = model.objects.update_or_create(
                 id=obj_data["id"], defaults=fix_keys_in_dict(obj_data)
             )
-        except (ValueError, IntegrityError, ValidationError) as e:
+        except (ValueError, IntegrityError, ValidationError, FieldError) as e:
             return JsonResponse(
                 {
                     "status": "error",
