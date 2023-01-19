@@ -11,7 +11,7 @@ from django.views.decorators.csrf import csrf_exempt
 from core import const
 
 
-def swap_string(string):
+def swap_string(string: str) -> str:
     """
     Swap string using IMPORT_MAPPING dictionary
     or return original string if not found.
@@ -19,7 +19,7 @@ def swap_string(string):
     return const.IMPORT_MAPPING.get(string, string)
 
 
-def fix_keys_in_dict(dictionary):
+def fix_keys_in_dict(dictionary: dict) -> dict:
     """
     Swap keys in dictionary using swap_string function.
     """
@@ -29,7 +29,7 @@ def fix_keys_in_dict(dictionary):
     return dictionary
 
 
-def import_data(body):
+def import_data(body: list) -> JsonResponse:
     for obj_dict in body:
         # Get model name from the first key in the dictionary
         model_name = swap_string(next(iter(obj_dict)))
@@ -45,7 +45,7 @@ def import_data(body):
                 },
                 status=400,
             )
-        obj_data = next(iter(obj_dict.values()))
+        obj_data: dict = next(iter(obj_dict.values()))
 
         if not obj_data.get("id"):
             return JsonResponse(
@@ -56,8 +56,8 @@ def import_data(body):
                 status=400,
             )
 
-        attributes_ids = obj_data.pop("attributes_ids", None)
-        products_ids = obj_data.pop("products_ids", None)
+        attributes_ids: list = obj_data.pop("attributes_ids", None)
+        products_ids: list = obj_data.pop("products_ids", None)
 
         try:
             obj, _ = model.objects.update_or_create(
