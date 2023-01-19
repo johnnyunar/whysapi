@@ -3,13 +3,14 @@ from typing import Optional
 
 from django.core.exceptions import ValidationError, FieldError
 from django.db import IntegrityError
+from django.db.models import Model
 from django.forms import model_to_dict
 from django.http import JsonResponse
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 
-from core.utils import swap_string, get_model, fix_keys_in_dict
+from core.utils import swap_string, get_model, fix_keys_in_dict, create_obj
 
 
 def import_data(body: list) -> JsonResponse:
@@ -40,14 +41,15 @@ def import_data(body: list) -> JsonResponse:
                 status=400,
             )
 
-        attributes_ids: list = obj_data.pop("attributes_ids", None)
-        products_ids: list = obj_data.pop("products_ids", None)
-
         try:
-            obj, _ = model.objects.update_or_create(
-                id=obj_data["id"], defaults=fix_keys_in_dict(obj_data)
-            )
-        except (ValueError, IntegrityError, ValidationError, FieldError) as e:
+            create_obj(model, obj_data)
+        except (
+            AttributeError,
+            ValueError,
+            IntegrityError,
+            ValidationError,
+            FieldError,
+        ) as e:
             return JsonResponse(
                 {
                     "status": "error",
@@ -55,11 +57,6 @@ def import_data(body: list) -> JsonResponse:
                 },
                 status=400,
             )
-
-        if attributes_ids:
-            obj.attributes.set(attributes_ids)
-        if products_ids:
-            obj.products.set(products_ids)
 
     return JsonResponse({"status": "success"})
 

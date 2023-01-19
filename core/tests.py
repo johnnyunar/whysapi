@@ -3,7 +3,8 @@ from django.apps import apps
 from django.urls import reverse
 import json
 
-from core.models import AttributeName, AttributeValue, Product, Attribute
+from core.models import AttributeName, AttributeValue, Product, Attribute, \
+    Catalog
 from core.views import ModelListView, ObjectDetailView
 
 
@@ -111,8 +112,7 @@ class ImportObjectsViewTest(TestCase):
             data=json.dumps(data),
             content_type="application/json",
         )
-        model = apps.get_model("core", "Catalog")
-        obj = model.objects.get(id=1)
+        obj = Catalog.objects.get(id=1)
         self.assertEqual(obj.attributes.count(), 2)
         self.assertEqual(obj.products.count(), 2)
 
