@@ -5,7 +5,7 @@
     <img src="static/core/img/whys-logo.webp" alt="Logo" width="150">
   </a>
 
-  <h3 align="center">Whys API</h3>
+<h3 align="center">Whys API</h3>
 
   <p align="center">
     REST API Exercise
@@ -51,29 +51,42 @@ This is an exercise for the company Whys.
 
 * [Docker](https://www.docker.com/)
 
-
 ### Installation
 
 1. Clone the repo
+
 ```sh
 git clone https://github.com/johnunar/whysapi.git
 ```
 
 2. Run the docker-compose
+
 ```sh
 docker-compose up
 ```
 
+**Note**: In case the app won't start for the first time, just wait for the database
+to initialize and restart the *whysapi* container.
 
 ## Usage
 
-This is a REST API, so you can use any tool to test it. I recommend [Insomnia](https://insomnia.rest/).
+This is a REST API, so you can use any tool to test it. I
+recommend [Insomnia](https://insomnia.rest/).
 
-There are 3 endpoints:
-### /import/
-This endpoint is used to import the data using JSON. You can use the file `data.json` in the root of the project to test it.
-### /detail/<model_name>/
-This endpoint is used to get a list of model objects from the database. You can use the following models:
+Base URL: `http://localhost:8000/`
+
+There are **3 endpoints**:
+
+### `/import/`
+
+This endpoint is used to import the data using JSON. You can use the
+file `data.json` in the root of the project to test it.
+
+### `/detail/<model_name>/`
+
+This endpoint is used to get a list of model objects from the database. You can
+use the following models:
+
 * `attributename`
 * `attributevalue`
 * `attribute`
@@ -82,8 +95,11 @@ This endpoint is used to get a list of model objects from the database. You can 
 * `image`
 * `productimage`
 * `catalog`
-### /detail/<model_name>/\<pk>/
-This endpoint is used to get a specific model object from the database, where `pk` is the primary key of the object.
+
+### `/detail/<model_name>/<pk>/`
+
+This endpoint is used to get a specific model object from the database,
+where `pk` is the primary key of the object.
 
 404 Not Found will be returned if the object does not exist.
 
@@ -100,4 +116,5 @@ Jan Unar
 * [johnny@unar.dev](mailto:johnny@unar.dev)
 * [unar.dev](https://unar.dev/)
 
-Project Link: [https://github.com/johnunar/whysapi](https://github.com/johnunar/whysapi)
+Project
+Link: [https://github.com/johnunar/whysapi](https://github.com/johnunar/whysapi)
