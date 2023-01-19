@@ -11,7 +11,7 @@
     REST API Exercise
       <br />
       <br />
-      <a href="https://whysapi.unar.dev/">View Demo</a>
+      <a href="https://whys.unar.dev/">View Demo</a>
       ·
       <a href="https://github.com/johnunar/whysapi/issues">Report Bug</a>
       ·
