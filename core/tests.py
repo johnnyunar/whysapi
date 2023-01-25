@@ -1,7 +1,7 @@
-from django.test import RequestFactory, TestCase, Client
-from django.apps import apps
-from django.urls import reverse
 import json
+
+from django.test import RequestFactory, TestCase, Client
+from django.urls import reverse
 
 from core.models import AttributeName, AttributeValue, Product, Attribute, \
     Catalog
